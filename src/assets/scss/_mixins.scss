@@ -1,0 +1,30 @@
+@import '_variables';
+@import '_fonts';
+
+$yellow-shadow: rgba(128, 96, 51, 0.71);
+$yellow-highlight: rgba(189, 137, 49, 0.67);
+
+@mixin text-shadow {
+  text-shadow:
+          1px 0px 0px $yellow-highlight, 0px 1px 0px $yellow-shadow,
+          2px 1px 0px $yellow-highlight, 1px 2px 0px $yellow-shadow,
+          3px 2px 0px $yellow-highlight, 2px 3px 0px $yellow-shadow,
+          4px 3px 0px $yellow-highlight, 3px 4px 0px $yellow-shadow,
+          5px 4px 0px $yellow-highlight, 4px 5px 0px $yellow-shadow,
+          6px 5px 0px $yellow-highlight, 5px 6px 0px $yellow-shadow,
+          7px 6px 0px $yellow-highlight
+}
+
+@mixin title-font {
+  color: $yellow;
+  font-family: $font-title-family;
+  letter-spacing: 10px;
+  //@include text-shadow();
+}
+
+@mixin title-body {
+  font-family: $font-body-family;
+  color: $yellow;
+
+}
+
