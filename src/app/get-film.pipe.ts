@@ -33,7 +33,7 @@ export class GetFilmPipe implements PipeTransform {
     let films = new BehaviorSubject<Film[]>(null);
 
     return new Promise((resolve, reject) => {
-      this.getFilmPromise(value).then(data => resolve(data));
+      this.getFilmPromise(value).then(data => resolve(data.sort((a: Film, b: Film) => a.episode_id - b.episode_id)));
     });
 
   }
