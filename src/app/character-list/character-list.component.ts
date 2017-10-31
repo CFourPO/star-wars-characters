@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CharacterService } from "../character.service";
-import { CharacterDetails } from "../shared/character";
-import { Observable } from "rxjs";
+import { CharacterService } from '../character.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-character-list',
@@ -11,7 +10,6 @@ import { Observable } from "rxjs";
 export class CharacterListComponent implements OnInit {
 
   @Output() selectedCharacter: EventEmitter<string> = new EventEmitter<string>();
-  //characters: CharacterDetails[];
   $charactersJSON: Observable<{name: string, url: string}>;
   activeChar: string;
 
