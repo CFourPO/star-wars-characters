@@ -1,0 +1,22 @@
+
+
+    <div class="table-container">
+        <table class="table-condensed">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Episode</th>
+            <th>Release Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor="let film of selectedChar.films | getFilm | async">
+            <tr>
+                <td>{{film.title}}</td>
+                <td>{{film.episode_id}}</td>
+                <td>{{film.release_date | date:'fullDate'}}</td>
+            </tr>
+        </ng-container>
+        </tbody>
+    </table>
+    </div>

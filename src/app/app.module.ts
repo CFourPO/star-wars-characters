@@ -6,13 +6,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterService } from "./character.service";
-import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { GetFilmPipe } from './get-film.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterListComponent,
-    CharacterDetailComponent
+    CharacterDetailsComponent,
+    GetFilmPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,15 @@
-<app-character-list></app-character-list>
-<app-character-detail [selectedCharacter]="selectedCharacter"></app-character-detail>
+<div class="flex-container">
+    <div class="flex-center-item">
+        <h1>{{title}}</h1>
+        <ng-container *ngIf="pristine">
+            <p>Once upon a time, I spent far too long messing around with CSS animations... The result was this fun little Star Wars themed character viewer.</p>
+            <p>So please, click a name below and check out some more information about the character.</p>
+        </ng-container>
+    </div>
+
+    <div class="flex-center-item">
+        <app-character-list (selectedCharacter)="getCharacterDetails($event)"></app-character-list>
+        <app-character-details *ngIf="selectedChar" [selectedChar]="selectedChar"></app-character-details>
+    </div>
+</div>
+

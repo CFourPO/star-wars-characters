@@ -1,5 +1,6 @@
-<ul>
-  <li *ngFor="let char of characters">
-    <a (click)="getCharacterDetails(char.url)">{{char.name}}</a>
-  </li>
-</ul>
+<div class="menu-bar">
+    <div *ngFor="let character of $charactersJSON | async"
+         [ngClass]="{'selected': character.name == activeChar}"
+         class="menu-item"
+         (click)="handleCharSelection(character)">{{character.name}}</div>
+</div>

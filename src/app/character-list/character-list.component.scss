@@ -1,0 +1,70 @@
+//
+//.fixed-container {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100vw;
+//  height: 100vh;
+//  //border: 10px red inset;
+//  z-index: 99999;
+//}
+//
+//.character-tile-container {
+//  position: relative;
+//  width: 50vw;
+//  height: 50vh;
+//  display: inline-block;
+//  outline: 1px red inset;
+//  margin: 0;
+//
+//}
+//
+
+.menu-bar {
+  display: flex;
+  height: 30px;
+  flex-flow: row nowrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+
+.menu-item {
+  width: 100%;
+  white-space: nowrap;
+
+  padding: .1em .3em;
+}
+
+.selected {
+  color: white !important;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media all and (max-width : 480px) {
+  .menu-bar {
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  .menu-item {
+    width: 100%;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  .menu-bar {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .menu-item {
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+

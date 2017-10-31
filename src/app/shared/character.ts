@@ -1,3 +1,4 @@
+import { Film } from "./film";
 export interface Character {
     name: string;
     url: string;
@@ -13,7 +14,7 @@ export interface CharacterDetails {
     birth_year: string;
     gender: string;
     homeworld: string;
-    films: string[];
+    films: string[] | Film[];
     species: string[];
     vehicles: string[];
     starships: string[];
