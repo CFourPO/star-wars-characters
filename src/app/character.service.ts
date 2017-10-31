@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from "@angular/http";
-import { Observable } from "rxjs";
-import { CharacterDetails } from "./shared/character";
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs';
+import { CharacterDetails } from './shared/character';
+
 
 @Injectable()
 export class CharacterService {
@@ -13,7 +14,7 @@ export class CharacterService {
   }
 
   getCharacters() {
-    return this.http.get('/assets/characters.json')
+    return this.http.get('./assets/characters.json')
         .map(response => response.json().characters)
         .catch(error => Observable.throw(error));
   }

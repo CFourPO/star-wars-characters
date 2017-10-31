@@ -1,70 +1,28 @@
-//
-//.fixed-container {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  width: 100vw;
-//  height: 100vh;
-//  //border: 10px red inset;
-//  z-index: 99999;
-//}
-//
-//.character-tile-container {
-//  position: relative;
-//  width: 50vw;
-//  height: 50vh;
-//  display: inline-block;
-//  outline: 1px red inset;
-//  margin: 0;
-//
-//}
-//
-
-.menu-bar {
-  display: flex;
-  height: 30px;
-  flex-flow: row nowrap;
-  align-content: space-around;
-  justify-content: center;
-}
+@import '../../assets/scss/_colors';
 
 
 .menu-item {
-  width: 100%;
-  white-space: nowrap;
+  color: #999;
+  text-align: left;
+  transition: all 100ms ease-in;
+}
 
-  padding: .1em .3em;
+.menu-item:hover {
+  color: rgba(238, 238, 238, 0.64);
+  cursor: pointer;
+  //border-bottom: 2px solid rgba(238, 238, 238, 0.64);
 }
 
 .selected {
-  color: white !important;
+  color: #eee !important;
+  font-weight: bold;
+  //border-bottom: 2px solid #EEE;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media all and (max-width : 480px) {
-  .menu-bar {
-    flex-flow: column nowrap;
-    justify-content: space-between;
-  }
-
-  .menu-item {
-    width: 100%;
-    line-height: 30px;
-    white-space: nowrap;
-  }
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
-  .menu-bar {
-    flex-flow: row nowrap;
-    justify-content: space-around;
-  }
-
-  .menu-item {
-    width: 100%;
-    white-space: nowrap;
-  }
+.selected:hover {
+  color: #eee !important;
+  font-weight: bold;
+  //border-bottom: 2px solid #EEE;
+  cursor: default;
 }
 

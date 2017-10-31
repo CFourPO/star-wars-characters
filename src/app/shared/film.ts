@@ -8,7 +8,7 @@ export interface Film {
     characters: string[];
     planets: string[];
     starships: string[];
-    vehicles: string[],
+    vehicles: string[];
     species: string[];
     created: string; // "2015-04-17T06:51:30.504780Z",
     edited: string; // "2015-04-17T06:51:30.504780Z",

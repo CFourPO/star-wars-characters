@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CharacterListComponent } from './character-list/character-list.component';
-import { CharacterService } from "./character.service";
+import { CharacterService } from './character.service';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { GetFilmPipe } from './get-film.pipe';
 

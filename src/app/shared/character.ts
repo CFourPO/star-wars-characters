@@ -1,4 +1,4 @@
-import { Film } from "./film";
+import { Film } from './film';
 export interface Character {
     name: string;
     url: string;

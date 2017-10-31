@@ -1,15 +1,26 @@
-<div class="flex-container">
-    <div class="flex-center-item">
-        <h1>{{title}}</h1>
-        <ng-container *ngIf="pristine">
-            <p>Once upon a time, I spent far too long messing around with CSS animations... The result was this fun little Star Wars themed character viewer.</p>
-            <p>So please, click a name below and check out some more information about the character.</p>
-        </ng-container>
+<div class="container">
+    <div class="row">
+        <h1 class="col-xs-12">{{title}}</h1>
     </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <ng-container >
+                <p>Check out some details on your favorite Star Wars characters by selecting their name from the navigation bar below. This is powered by Angular 2, the Star Wars API, Bootstrap, ng-cli, Webpack, and some custom styling using SASS. Feel free to check out the <a href="https://github.com/CFourPO/star-wars-characters/" alt="github - cfourpo/star-wars-characters">source code</a>, or check out my website <a href="http://www.chrispomerville.com">chrispomerville.com</a> to see some of my other work.</p>
+            </ng-container>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-character-list (selectedCharacter)="getCharacterDetails($event)"></app-character-list>
+        </div>
 
-    <div class="flex-center-item">
-        <app-character-list (selectedCharacter)="getCharacterDetails($event)"></app-character-list>
-        <app-character-details *ngIf="selectedChar" [selectedChar]="selectedChar"></app-character-details>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-character-details *ngIf="selectedChar" [selectedChar]="selectedChar"></app-character-details>
+        </div>
     </div>
 </div>
 

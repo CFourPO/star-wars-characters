@@ -1,6 +1,6 @@
 <div class="menu-bar">
     <div *ngFor="let character of $charactersJSON | async"
          [ngClass]="{'selected': character.name == activeChar}"
-         class="menu-item"
+         class="menu-item col-xs-12 col-sm-3"
          (click)="handleCharSelection(character)">{{character.name}}</div>
 </div>
