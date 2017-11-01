@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "baseUrl": "",
+    "baseUrl": "https://s3.us-east-2.amazonaws.com/cfourpo-star-wars-characters/",
     "types": []
   },
   "exclude": [
