@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -8,6 +8,9 @@ import { CharacterListComponent } from './character-list/character-list.componen
 import { CharacterService } from './character.service';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
 import { GetFilmPipe } from './get-film.pipe';
+import { ErrorComponent } from './error/error.component';
+import { ErrorService } from "./error/error.service";
+import { HeightPipe } from './height.pipe';
 
 @NgModule({
   declarations: [
@@ -15,13 +18,19 @@ import { GetFilmPipe } from './get-film.pipe';
     CharacterListComponent,
     CharacterDetailsComponent,
     GetFilmPipe,
+    ErrorComponent,
+    HeightPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [CharacterService],
+  providers: [
+    {
+    provide: ErrorHandler,
+    useClass: ErrorService
+  }, CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

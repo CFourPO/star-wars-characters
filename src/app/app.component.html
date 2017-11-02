@@ -14,7 +14,6 @@
         <div class="col-xs-12">
             <app-character-list (selectedCharacter)="getCharacterDetails($event)"></app-character-list>
         </div>
-
     </div>
     <hr>
     <div class="row">
@@ -22,5 +21,6 @@
             <app-character-details *ngIf="selectedChar" [selectedChar]="selectedChar"></app-character-details>
         </div>
     </div>
+    <app-error *ngIf="hasError" [hasError]="hasError" [error]="error"></app-error>
 </div>
 

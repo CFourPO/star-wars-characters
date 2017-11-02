@@ -2,9 +2,18 @@
 <div class="row">
     <div class="col-xs-12 col-sm-4">
         <h4>Character Stats</h4>
+        <label class="checkbox-inline">
+            <input type="checkbox" checked data-toggle="toggle"> First
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" data-toggle="toggle"> Second
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" data-toggle="toggle"> Third
+        </label>
         <dl class="dl-horizontal">
             <dt>Height:</dt>
-            <dd>{{selectedChar.height}}</dd>
+            <dd>{{selectedChar.height | height}}</dd>
             <dt>Weight:</dt>
             <dd>{{selectedChar.mass}}</dd>
             <dt>Hair Color:</dt>

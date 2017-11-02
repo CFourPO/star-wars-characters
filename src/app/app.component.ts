@@ -12,15 +12,25 @@ export class AppComponent implements OnInit {
     title = 'star wars characters';
     selectedChar: CharacterDetails;
 
+    hasError = false;
+    error: any;
+
     constructor(private cs: CharacterService) {}
 
     ngOnInit() {
-
     }
 
     getCharacterDetails(event) {
-        this.cs.getCharacterDetails(event).subscribe(data => {
-            this.selectedChar = data;
-        });
+        this.hasError = false;
+        this.error = null;
+
+        this.cs.getCharacterDetails(event).subscribe(
+            data => {
+                this.selectedChar = data;
+            }, error => {
+                this.selectedChar = null;
+                this.hasError = true;
+                this.error = error;
+            });
     }
 }
