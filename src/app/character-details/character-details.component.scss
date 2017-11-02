@@ -18,9 +18,27 @@ dt {
   color: #555;
 }
 
-table {
+.traits-table {
+  width: 100%;
+  color: white;
+  th {
+    text-align: right;
+    width: 40%;
+    margin-right: .2em;
+    color: #999;
+  }
+  td {
+    text-align: center;
+  }
+}
+
+table.films-table {
   background-color: #eee;
   color: #000;
+}
+
+dd {
+  padding-left: 0;
 }
 
 

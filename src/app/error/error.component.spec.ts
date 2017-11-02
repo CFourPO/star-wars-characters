@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CharacterListComponent } from './character-list.component';
+import { ErrorComponent } from './error.component';
 
-describe('CharacterListComponent', () => {
-  let component: CharacterListComponent;
-  let fixture: ComponentFixture<CharacterListComponent>;
+describe('ErrorComponent', () => {
+  let component: ErrorComponent;
+  let fixture: ComponentFixture<ErrorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CharacterListComponent ]
+      declarations: [ ErrorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CharacterListComponent);
+    fixture = TestBed.createComponent(ErrorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,5 +22,4 @@ describe('CharacterListComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-
 });

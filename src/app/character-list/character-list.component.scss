@@ -1,28 +1,21 @@
 @import '../../assets/scss/_colors';
 
 
+hr {
+  border: 2px solid #A5111A;
+}
+
+.btn-warning {
+  &:focus {
+    outline: none;
+  }
+}
+.menu-bar {
+  width: 100%;
+}
 .menu-item {
   color: #999;
   text-align: left;
   transition: all 100ms ease-in;
-}
-
-.menu-item:hover {
-  color: rgba(238, 238, 238, 0.64);
-  cursor: pointer;
-  //border-bottom: 2px solid rgba(238, 238, 238, 0.64);
-}
-
-.selected {
-  color: #eee !important;
-  font-weight: bold;
-  //border-bottom: 2px solid #EEE;
-}
-
-.selected:hover {
-  color: #eee !important;
-  font-weight: bold;
-  //border-bottom: 2px solid #EEE;
-  cursor: default;
 }
 
