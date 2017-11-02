@@ -22,4 +22,5 @@ describe('CharacterListComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
 });

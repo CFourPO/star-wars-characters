@@ -26,11 +26,7 @@ import { HeightPipe } from './height.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [
-    {
-    provide: ErrorHandler,
-    useClass: ErrorService
-  }, CharacterService],
+  providers: [CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

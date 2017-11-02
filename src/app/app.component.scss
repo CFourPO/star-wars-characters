@@ -1,9 +1,5 @@
 @import '../assets/scss/_mixins';
 
-hr {
-  color: $cyth-red;
-  border: 2px solid $cyth-red;
-}
 
 h1 {
   @include title-font();

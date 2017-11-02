@@ -9,13 +9,11 @@
             </ng-container>
         </div>
     </div>
-    <hr>
     <div class="row">
         <div class="col-xs-12">
             <app-character-list (selectedCharacter)="getCharacterDetails($event)"></app-character-list>
         </div>
     </div>
-    <hr>
     <div class="row">
         <div class="col-xs-12">
             <app-character-details *ngIf="selectedChar" [selectedChar]="selectedChar"></app-character-details>

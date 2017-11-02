@@ -1,33 +1,35 @@
 <h2>{{selectedChar.name}}</h2>
 <div class="row">
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-5">
         <h4>Character Stats</h4>
-        <label class="checkbox-inline">
-            <input type="checkbox" checked data-toggle="toggle"> First
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" data-toggle="toggle"> Second
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" data-toggle="toggle"> Third
-        </label>
-        <dl class="dl-horizontal">
-            <dt>Height:</dt>
-            <dd>{{selectedChar.height | height}}</dd>
-            <dt>Weight:</dt>
-            <dd>{{selectedChar.mass}}</dd>
-            <dt>Hair Color:</dt>
-            <dd>{{selectedChar.hair_color}}</dd>
-            <dt>Skin Color:</dt>
-            <dd>{{selectedChar.skin_color}}</dd>
-            <dt>Eye Color:</dt>
-            <dd>{{selectedChar.eye_color}}</dd>
-        </dl>
+        <table class="traits-table">
+            <tr>
+                <th>Height:</th>
+                <td>{{selectedChar.height | height}}</td>
+            </tr>
+            <tr>
+                <th>Weight:</th>
+                <!-- TODO: Implement Weight Pipe -->
+                <td>{{selectedChar.mass}} kg</td>
+            </tr>
+            <tr>
+                <th>Hair Color:</th>
+                <td>{{selectedChar.hair_color | titlecase}}</td>
+            </tr>
+            <tr>
+                <th>Skin Color:</th>
+                <td>{{selectedChar.skin_color | titlecase}}</td>
+            </tr>
+            <tr>
+                <th>Eye Color:</th>
+                <td>{{selectedChar.eye_color | titlecase}}</td>
+            </tr>
+        </table>
     </div>
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12 col-sm-7">
         <h4>Films</h4>
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered films-table">
                 <thead>
                 <tr>
                     <th>Ep.</th>
@@ -47,5 +49,4 @@
             </table>
         </div>
     </div>
-
 </div>
