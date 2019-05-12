@@ -1,0 +1,17 @@
+@import '_fonts';
+@import '_colors';
+
+$font-title-family: 'SW Crawl Title', 'Helvetica Neue', sans-serif;
+$font-body-family: 'SW Crawl Body', 'Helvetica Neue', sans-serif;
+
+@mixin title-font {
+  color: $yellow;
+  font-family: $font-title-family;
+  letter-spacing: 10px;
+}
+
+@mixin title-body {
+  font-family: $font-body-family;
+  color: $yellow;
+}
+
